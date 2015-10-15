@@ -4,7 +4,8 @@ module.exports=function(grunt){
 	require('load-grunt-config')(grunt, {
 		configPath: path.join(process.cwd(), 'tasks'),
 		data: {
-			pkg: "this is pkg"
+			pkg: "this is pkg",
+			src: path.join(process.cwd(), 'src')
 		}
 	});
 };
