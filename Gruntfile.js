@@ -1,11 +1,10 @@
 module.exports=function(grunt){
-	grunt.initConfig({
-		
-	});
+	var path = require("path");
 
-	require('load-grunt-tasks')(grunt);
-
-	grunt.registerTask('default', function(){
-		console.log("this is default grunt task");
+	require('load-grunt-config')(grunt, {
+		configPath: path.join(process.cwd(), 'tasks'),
+		data: {
+			pkg: "this is pkg"
+		}
 	});
-}
+};
